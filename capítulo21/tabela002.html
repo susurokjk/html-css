@@ -12,6 +12,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th{
@@ -26,13 +27,27 @@
             background-color: lightgray;
         }
 
-        td.num{
-            text-align: center;
-        }
-
         thead, tfoot{
             background-color: rgb(56, 56, 56);
             color: white;
+        }
+
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(56, 56, 56);
+        }
+
+        tbody > tr:nth-child(odd){ /* ou 2n-1 */
+            background-color: lightgrey;
+        }
+
+        tbody > tr:nth-child(even){ /* 2n */
+            background-color: white;
+        }
+
+        td.num{
+            text-align: center;
         }
     </style>
 </head>
