@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela</title>
+    <title>Notas em Tabelas</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-        caption{
-            font-weight: bold;
-            font-size: 1.3em;
-            padding: 10px;
         }
 
         table{
@@ -21,70 +15,92 @@
 
         th, td{
             border: 1px solid black;
-            padding: 5px;
+            padding: 10px;
             width: 130px;
+            font-size: 1.3em;
         }
 
-        .titulos{
-            background-color: lightgrey;
-            color: black;
+        th{
+            background-color: rgb(114, 114, 114);
+            color: white;
+        }
+
+        .tipo{
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .media{
+            text-align: left;
+        }
+
+        .Notas{
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <table>
-        <caption>Filmes Favoritos</caption>
-        <header>
+        <thead>
             <tr>
-                <th class="titulos">Grupo</th>
-                <th class="titulos">Nomes</th>
-                <th colspan="3" class="titulos">Filmes</th>
+                <th scope="col" rowspan="2">Área</th>
+                <th scope="col" rowspan="2">Disciplinas</th>
+                <th scope="colgroup" colspan="2">Notas</th>
+                <th scope="col" rowspan="2">Média</th>
+                <tr>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                </tr>
             </tr>
-        </header>
-        <main>
+        </thead>
+        <tbody>
             <tr>
-                <th rowspan="4" class="titulos">Mulheres</th>
-            </tr>
-            <tr>
-                <td>Ana Maria Santos</td>
-                <td>Alien</td>
-                <td>Rambo</td>
-                <td>Vingadores</td>
-            </tr>
-            <tr>
-                <td>Beatriz Souza</td>
-                <td>Hulk</td>
-                <td>Inception</td>
-                <td>Batman</td>
+                <td scope="colgroup" rowspan="4" class="tipo">Exatas</td>
+                <td>Matemática</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
             </tr>
             <tr>
-                <td>Cláudia Melo</td>
-                <td>Oblivion</td>
-                <td>Matrix</td>
-                <td>Big Hero</td>
+                <td>Física</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
             </tr>
             <tr>
-                <th rowspan="4" class="titulos">Homens</th>
+                <td>Química</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
             </tr>
             <tr>
-                <td>Bruno Mendonça</td>
-                <td>Intocáveis</td>
-                <td>Amnésia</td>
-                <Td>Gladiador</Td>
+                <td>Biologia</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
             </tr>
             <tr>
-                <td>Daniel Lourenço</td>
-                <td>Wall-E</td>
-                <td>Oldboy</td>
-                <td>Dangal</td>
+                <th scope="col" colspan="4" class="media">Média de Exatas</th>
+                <th scope="col">0.0</th>
             </tr>
             <tr>
-                <td>Fabiano Mota</td>
-                <td>Star Wars 5</td>
-                <td>Taxi Driver</td>
-                <td>Toy Story</td>
+                <td scope="colgroup" rowspan="2" class="tipo">Humanas</td>
+                <td>História</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
             </tr>
-        </main>
+            <tr>
+                <td>Geografia</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+                <td class="Notas">0.0</td>
+            </tr>
+            <tr>
+                <th scope="col" colspan="4" class="media">Média de Humanas</th>
+                <th scope="col">0.0</th>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
